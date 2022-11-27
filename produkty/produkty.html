@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../png/shopping-cart.png">
+    <title>Sklep</title>
+</head>
+<body>
+    <header>
+        <span id="headerShopName"><a href="../index.html">PITEKSKLEP</a></span>
+        <button class="responsiveList">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </button>
+        <div id="headerLinks">
+            <nav>
+                <ul class="uList">
+                    <li><a href="" class="hLink">Wszystkie produkty</a></li>
+                    <li><a href="#" class="hLink" id="products-on-sale">Dzisiejsze okazje</a></li>
+                    <li><a href="#" class="hLink">Karty podarunkowe</a></li>
+                    <li><a href="#" class="hLink">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="headerButtons">
+            <form action="#"><button type="submit" class="redButtons"><img src="../png/login.png" alt="Login button">Zaloguj</button></form>
+            <button type="submit" class="redButtons" id="cart">
+                <img src="../png/shopping-cart.png" alt="Cart button">
+                <div class="cart-notification">0</div>
+            </button>
+            <div class="cart-window">
+                <section class="cart-header">
+                    <span class="cart-price-text">Kwota: <span class="cart-total-price">0 zł</span></span>
+                </section>
+                    <hr>
+                <section class="cart-products">
+                    <div class="cart-if-empty">Twój koszyk jest pusty...</div>
+                </section>
+                <hr>
+                <div class="cart-btn-section">
+                    <button class="cart-clear-button"><img src="../png/cart-clear.png" alt="clear cart button"></button>
+                    <button class="cart-checkout-button">Przejdź dalej</button>
+                </div>
+            </div>
+            <input type="checkbox" id="darkmode-toggle" onclick="dark_mode()">
+            <label for="darkmode-toggle" id="toggle-label"></label>
+        </div>
+    </header>
+    <main>
+        
+        <div class="mainFlex">
+            <div class="mainLeft">
+                <p class="listTitle">Kategorie</p>
+                <section class="categories-section"></section>
+            </div>
+            <div class="mainRight"></div>
+        </div>
+    </main>
+    <script src="produkty.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

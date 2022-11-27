@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="icon" href="png/shopping-cart.png">
+    <title>Sklep</title>
+</head>
+<body>
+    <header>
+        <span id="headerShopName"><a href="index.html">PITEKSKLEP</a></span>
+        <button class="responsiveList">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </button>
+        <div id="headerLinks">
+            <nav>
+                <ul class="uList">
+                    <li><a href="produkty/produkty.html" class="hLink">Sklep</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="headerButtons">
+            <form action="#"><button type="submit" class="redButtons"><img src="png/login.png" alt="Login button">Zaloguj</button></form>
+            <input type="checkbox" id="darkmode-toggle" onclick="dark_mode()">
+            <label for="darkmode-toggle" id="toggle-label"></label>
+        </div>
+    </header>
+    <main>
+        <div class="mainHeader">
+            <div class="mainButtons">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div class="mainLeft">
+            <h2>PIOTR ŁUSZCZ</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae officia, sint voluptas est nulla recusandae, voluptates, perspiciatis atque sit tempora quae quis numquam doloremque! Tempore explicabo corporis aut maiores dolore.</p>
+            <br>
+            <p>Sint fugit sunt nihil maxime qui nesciunt rem placeat iste distinctio modi ullam!</p>
+            <form action="produkty/produkty.html">
+                <button class="main-left-button">Przejdź do sklepu!</button>
+            </form>
+        </div>
+        <div class="mainRight">
+            <img src="png/homePageMainImage.png" alt="Image of phone" class="mainRightImg">
+        </div>
+    </main>
+</body>
+</html>
