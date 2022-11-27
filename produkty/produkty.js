@@ -7,7 +7,7 @@ const products = [
       Pamięć RAM: 4 GB<br>
       Pamięć wbudowana: 128 GB`,
       category: "apple",
-      price: 2899.99,
+      price: 2999.99,
       image: "produkty png/iphone11.png",
     },
     {
