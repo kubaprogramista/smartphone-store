@@ -1,16 +1,14 @@
 const products = [
-    {
+{
       id: 0,
       name: "iPhone 11",
       description: `Ekran: 6,1"<br>
-      Procesor: Apple A14 Bionic<br>
+      Procesor: Apple A13 Bionic<br>
       Pamięć RAM: 4 GB<br>
       Pamięć wbudowana: 128 GB`,
       category: "apple",
-      price: 3999.99,
-      image: "produkty png/iphone-11.jpg",
-      sale: true,
-      saleAmount: 200,
+      price: 2899.99,
+      image: "produkty png/iphone11.png",
     },
     {
       id: 1,
@@ -18,10 +16,10 @@ const products = [
       description: `Ekran: 6,1"<br>
       Procesor: Apple A15 Bionic<br>
       Pamięć RAM: 4 GB<br>
-      Pamięć wbudowana: 128 GB`,
+      Pamięć wbudowana: 512 GB`,
       category: "apple",
-      price: 4999.5,
-      image: "produkty png/iphone-13.jpg",
+      price: 6599.99,
+      image: "produkty png/iphone13.png",
     },
     {
       id: 2,
@@ -31,10 +29,8 @@ const products = [
       Pamięć RAM: 4 GB<br>
       Pamięć wbudowana: 128 GB`,
       category: "apple",
-      price: 4444.44,
-      image: "produkty png/iPhone-12.jpg",
-      sale: true,
-      saleAmount: 451,
+      price: 3999.99,
+      image: "produkty png/iphone12.png",
     },
     {
       id: 3,
@@ -115,5 +111,42 @@ const products = [
       category: "samsung",
       price: 3399.99,
       image: "produkty png/Samsung-s22.jpg",
+    },
+    {
+      id: 10,
+      name: "iPhone 11",
+      description: `Ekran: 6,1"<br>
+      Procesor: Apple A14 Bionic<br>
+      Pamięć RAM: 4 GB<br>
+      Pamięć wbudowana: 128 GB`,
+      category: "apple",
+      price: 3999.99,
+      image: "produkty png/iphone-11.jpg",
+      sale: true,
+      saleAmount: 200,
+    },
+    {
+      id: 11,
+      name: "iPhone 13",
+      description: `Ekran: 6,1"<br>
+      Procesor: Apple A15 Bionic<br>
+      Pamięć RAM: 4 GB<br>
+      Pamięć wbudowana: 128 GB`,
+      category: "apple",
+      price: 4999.5,
+      image: "produkty png/iphone-13.jpg",
+    },
+    {
+      id: 12,
+      name: "iPhone 12",
+      description: `Ekran: 6,1"<br>
+      Procesor: Apple A14 Bionic<br>
+      Pamięć RAM: 4 GB<br>
+      Pamięć wbudowana: 128 GB`,
+      category: "apple",
+      price: 4444.44,
+      image: "produkty png/iPhone-12.jpg",
+      sale: true,
+      saleAmount: 451,
     },
   ];
