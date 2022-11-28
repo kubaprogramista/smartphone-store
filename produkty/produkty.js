@@ -1,6 +1,6 @@
 const products = [
     {
-      id: 3,
+      id: 0,
       name: "iPhone 14 Pro Max",
       description: `Ekran: 6,7"<br>
       Procesor: Apple A16 Bionic<br>
@@ -13,7 +13,7 @@ const products = [
       saleAmount: 100,
     },
     {
-    id: 0,
+    id: 1,
       name: "iPhone 11",
       description: `Ekran: 6,1"<br>
       Procesor: Apple A13 Bionic<br>
@@ -24,7 +24,7 @@ const products = [
       image: "produkty png/iphone11.png",
     },
     {
-      id: 1,
+      id: 2,
       name: "iPhone 13",
       description: `Ekran: 6,1"<br>
       Procesor: Apple A15 Bionic<br>
@@ -35,7 +35,7 @@ const products = [
       image: "produkty png/iphone13.png",
     },
     {
-      id: 2,
+      id: 3,
       name: "iPhone 12",
       description: `Ekran: 6,1"<br>
       Procesor: Apple A14 Bionic<br>
@@ -46,7 +46,7 @@ const products = [
       image: "produkty png/iphone12.png",
     },
     {
-      id: 3,
+      id: 4,
       name: "Xiaomi 12 Pro",
       description: `Ekran: 6,73"<br>
       Procesor: Qualcomm Snapdragon 8<br>
@@ -59,7 +59,7 @@ const products = [
       saleAmount: 799,
     },
     {
-      id: 3,
+      id: 5,
       name: "Xiaomi Redmi 10C",
       description: `Ekran: 6,71"<br>
       Procesor: Qualcomm Snapdragon 680<br>
@@ -72,7 +72,7 @@ const products = [
       saleAmount: 100,
     },
     {
-      id: 5,
+      id: 6,
       name: "Samsung Z Fold4",
       description: `Ekran: 6,2", 7,6" - ekran po rozłożeniu<br>
       Procesor: Qualcomm Snapdragon 8<br>
@@ -85,7 +85,7 @@ const products = [
       saleAmount: 1000,
     },
     {
-      id: 5,
+      id: 7,
       name: "Samsung A53",
       description: `Ekran: 2,8"<br>
       Procesor: Spreadtrum SC6531F<br>
@@ -96,7 +96,7 @@ const products = [
       image: "produkty png/Samsung-a53.jpg",
     },
     {
-      id: 6,
+      id: 8,
       name: "Samsung S20",
       description: `Ekran: 6,5"<br>
       Procesor: Qualcomm Snapdragon 865<br>
@@ -109,7 +109,7 @@ const products = [
       saleAmount: 300,
     },
     {
-      id: 7,
+      id: 9,
       name: "Samsung S22",
       description: `Ekran: 6,6"<br>
       Procesor: Samsung Exynos 2200<br>
@@ -120,7 +120,7 @@ const products = [
       image: "produkty png/Samsung-s22.jpg",
     },
     {
-      id: 3,
+      id: 10,
       name: "Huawei P50 Pro",
       description: `Ekran: 6,6"<br>
       Procesor: Qualcomm Snapdragon 888<br>
@@ -131,7 +131,7 @@ const products = [
       image: "produkty png/huawei-2.jpg",
     },
     {
-      id: 4,
+      id: 11,
       name: "Huawei P20 Lite",
       description: `Ekran: 6,6"<br>
       Procesor: Qualcomm Snapdragon 888<br>
