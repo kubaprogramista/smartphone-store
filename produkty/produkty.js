@@ -81,8 +81,19 @@ const products = [
       category: "samsung",
       price: 8999,
       image: "produkty png/samsung-galaxy-z-fold4.png",
+    },
+    {
+      id: 6,
+      name: "Samsung S22 Ultra",
+      description: `Ekran: 6,8"<br>
+      Procesor: Samsung Exynos 2200<br>
+      Pamięć RAM: 12 GB<br>
+      Pamięć wbudowana: 512 GB`,
+      category: "samsung",
+      price: 6899.99,
+      image: "produkty png/samsung-s22-ultra.png",
       sale: true,
-      saleAmount: 1000,
+      saleAmount: 900,
     },
     {
       id: 7,
