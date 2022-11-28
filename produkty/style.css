@@ -726,6 +726,10 @@ main {
         height: 50px;
         width: 150px;
     }
+    
+    .cart-notification {
+        right: -5px;
+    }
 }
 
 @media only screen and (max-width:1300px){
@@ -778,5 +782,9 @@ main {
 
     .mainRight {
         grid-template-columns: auto;
+    }
+    
+    .addToCartBtn {
+        display: block;
     }
 }
