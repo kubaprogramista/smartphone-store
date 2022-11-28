@@ -83,7 +83,7 @@ const products = [
       image: "produkty png/samsung-galaxy-z-fold4.png",
     },
     {
-      id: 6,
+      id: 7,
       name: "Samsung S22 Ultra",
       description: `Ekran: 6,8"<br>
       Procesor: Samsung Exynos 2200<br>
@@ -96,60 +96,25 @@ const products = [
       saleAmount: 900,
     },
     {
-      id: 7,
-      name: "Samsung A53",
-      description: `Ekran: 2,8"<br>
-      Procesor: Spreadtrum SC6531F<br>
-      Pamięć RAM: 8 MB<br>
-      Pamięć wbudowana: 16 MB`,
-      category: "samsung",
-      price: 1440.44,
-      image: "produkty png/Samsung-a53.jpg",
-    },
-    {
       id: 8,
-      name: "Samsung S20",
-      description: `Ekran: 6,5"<br>
-      Procesor: Qualcomm Snapdragon 865<br>
-      Pamięć RAM: 8 GB<br>
-      Pamięć wbudowana: 256 GB`,
-      category: "samsung",
-      price: 2620.2,
-      image: "produkty png/Samsung-s20.jpg",
-      sale: true,
-      saleAmount: 300,
-    },
-    {
-      id: 9,
-      name: "Samsung S22",
-      description: `Ekran: 6,6"<br>
-      Procesor: Samsung Exynos 2200<br>
-      Pamięć RAM: 8 GB<br>
-      Pamięć wbudowana: 128 GB`,
-      category: "samsung",
-      price: 3399.5,
-      image: "produkty png/Samsung-s22.jpg",
-    },
-    {
-      id: 10,
       name: "Huawei P50 Pro",
       description: `Ekran: 6,6"<br>
       Procesor: Qualcomm Snapdragon 888<br>
       Pamięć RAM: 8 GB<br>
       Pamięć wbudowana: 256 GB`,
       category: "huawei",
-      price: 1330,
-      image: "produkty png/huawei-2.jpg",
+      price: 4499,
+      image: "produkty png/huawei-1.jpg",
     },
     {
-      id: 11,
-      name: "Huawei P20 Lite",
-      description: `Ekran: 6,6"<br>
-      Procesor: Qualcomm Snapdragon 888<br>
-      Pamięć RAM: 8 GB<br>
-      Pamięć wbudowana: 256 GB`,
+      id: 9,
+      name: "Huawei Nova Y90",
+      description: `Ekran: 6,7"<br>
+      Procesor: Qualcomm Snapdragon 680<br>
+      Pamięć RAM: 6 GB<br>
+      Pamięć wbudowana: 128 GB`,
       category: "huawei",
-      price: 2250,
-      image: "produkty png/huawei-1.jpg",
+      price: 1099,
+      image: "produkty png/huawei-2.jpg",
     },
   ];
