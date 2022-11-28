@@ -47,6 +47,19 @@ const products = [
     },
     {
       id: 3,
+      name: "Xiaomi 12 Pro",
+      description: `Ekran: 6,73"<br>
+      Procesor: Qualcomm Snapdragon 8<br>
+      Pamięć RAM: 12 GB<br>
+      Pamięć wbudowana: 256 GB`,
+      category: "xiaomi",
+      price: 4999,
+      image: "produkty png/xiaomi-12-pro.png",
+      sale: true,
+      saleAmount: 799,
+    },
+    {
+      id: 3,
       name: "Xiaomi Redmi 10C",
       description: `Ekran: 6,71"<br>
       Procesor: Qualcomm Snapdragon 680<br>
@@ -59,30 +72,8 @@ const products = [
       saleAmount: 100,
     },
     {
-      id: 3,
-      name: "Huawei P50 Pro",
-      description: `Ekran: 6,6"<br>
-      Procesor: Qualcomm Snapdragon 888<br>
-      Pamięć RAM: 8 GB<br>
-      Pamięć wbudowana: 256 GB`,
-      category: "huawei",
-      price: 1330,
-      image: "produkty png/huawei-2.jpg",
-    },
-    {
-      id: 4,
-      name: "Huawei P20 Lite",
-      description: `Ekran: 6,6"<br>
-      Procesor: Qualcomm Snapdragon 888<br>
-      Pamięć RAM: 8 GB<br>
-      Pamięć wbudowana: 256 GB`,
-      category: "huawei",
-      price: 2250,
-      image: "produkty png/huawei-1.jpg",
-    },
-    {
       id: 5,
-      name: "Samsung Galaxy Z Fold4",
+      name: "Samsung Z Fold4",
       description: `Ekran: 6,2", 7,6" - ekran po rozłożeniu<br>
       Procesor: Qualcomm Snapdragon 8<br>
       Pamięć RAM: 12 GB<br>
@@ -127,5 +118,27 @@ const products = [
       category: "samsung",
       price: 3399.5,
       image: "produkty png/Samsung-s22.jpg",
+    },
+    {
+      id: 3,
+      name: "Huawei P50 Pro",
+      description: `Ekran: 6,6"<br>
+      Procesor: Qualcomm Snapdragon 888<br>
+      Pamięć RAM: 8 GB<br>
+      Pamięć wbudowana: 256 GB`,
+      category: "huawei",
+      price: 1330,
+      image: "produkty png/huawei-2.jpg",
+    },
+    {
+      id: 4,
+      name: "Huawei P20 Lite",
+      description: `Ekran: 6,6"<br>
+      Procesor: Qualcomm Snapdragon 888<br>
+      Pamięć RAM: 8 GB<br>
+      Pamięć wbudowana: 256 GB`,
+      category: "huawei",
+      price: 2250,
+      image: "produkty png/huawei-1.jpg",
     },
   ];
