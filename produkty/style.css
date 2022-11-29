@@ -11,6 +11,7 @@ body {
     background-color: var(--lightBlue);
     font-family: 'Dosis', sans-serif;
     letter-spacing: .1rem;
+    height: auto;
 }
 
 :root {
@@ -50,7 +51,6 @@ WAVES
 
 footer {
     position: relative;
-    height: 400px;
 }
 
 .bottom-wave {
@@ -455,7 +455,7 @@ header {
 
 main {
     width: 100vw;
-    height: 90vh;
+    height: 100%;
     position: relative;
 }
 
