@@ -46,7 +46,7 @@ WAVES
 .upper-wave svg {
     position: relative;
     display: block;
-    width: calc(147% + 1.3px);
+    min-width: calc(147% + 1.3px);
     height: 154px;
 }
 
@@ -72,7 +72,7 @@ footer {
 .bottom-wave svg {
     position: relative;
     display: block;
-    width: calc(219% + 1.3px);
+    min-width: calc(219% + 1.3px);
     height: 218px;
     transform: rotateY(180deg);
 }
