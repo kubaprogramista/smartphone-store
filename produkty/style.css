@@ -411,7 +411,7 @@ header {
 }
 
 #darkmode-toggle:checked + #toggle-label {
-    background: #252525;
+    background: #303030;
 }
 
 #darkmode-toggle:checked + #toggle-label:after {
