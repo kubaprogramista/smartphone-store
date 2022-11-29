@@ -11,7 +11,12 @@ body {
     background-color: var(--lightBlue);
     font-family: 'Dosis', sans-serif;
     letter-spacing: .1rem;
-    height: auto;
+    height: 132.5vh;
+    transition: height .3s ease-in-out;
+}
+
+body.active {
+    height: 88vh;
 }
 
 :root {

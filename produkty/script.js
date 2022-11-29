@@ -150,7 +150,6 @@ categoriesButtons.forEach((btn) =>
     btn.addEventListener('click', (e) => {
         const XD = e.target.className;
         
-        
         categoriesButtons.forEach(btn => {
             btn.classList.remove('active');
         });
@@ -160,12 +159,15 @@ categoriesButtons.forEach((btn) =>
         currentProducts = products;
         if(XD.includes("wszystkie")) {
             currentProducts = products;
+            document.body.classList.remove("active");
         } else {
             currentProducts = currentProducts.filter((product) => product.category === XD);
+            document.body.classList.add("active");
         }
         if(XD.includes('active')){
             categoriesButtons.forEach(btn => {
                 btn.classList.remove('active');
+                document.body.classList.remove("active");
             });
             currentProducts = products;
             categoriesButtons[0].classList.add("active");
