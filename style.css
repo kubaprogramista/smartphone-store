@@ -8,9 +8,7 @@
 
 body {
     color:var(--white);
-    background: url("png/blue_background.png");
     background-color: var(--lightBlue);
-    background-repeat: no-repeat;
     font-family: 'Dosis', sans-serif;
     letter-spacing: .1rem;
 }
@@ -28,6 +26,55 @@ body {
 /*
 --------------------------------HEADER-------------------------------------
 */
+
+.upper-wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: -10;
+}
+
+.upper-wave svg {
+    position: relative;
+    display: block;
+    width: calc(147% + 1.3px);
+    height: 154px;
+}
+
+.upper-wave .shape-fill {
+    fill: #264ACA;
+}
+
+
+.bottom-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    z-index: -10;
+}
+
+.bottom-wave svg {
+    position: relative;
+    display: block;
+    width: calc(219% + 1.3px);
+    height: 218px;
+    transform: rotateY(180deg);
+}
+
+.bottom-wave .shape-fill {
+    fill: #264ACA;
+}
+
+
+
+
 
 header {
     position: relative;
@@ -66,6 +113,7 @@ header {
     align-items: center;
     flex-wrap: wrap;
     margin: 0 60px 0 0;
+    z-index: 3;
 }
 
 #headerLinks nav {
@@ -129,6 +177,7 @@ header {
     outline: none;
     cursor: pointer;
     display: none;
+    z-index: 3;
 }
 
 .line {
@@ -151,6 +200,7 @@ header {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    z-index: 3;
 }
 
 .redButtons {
