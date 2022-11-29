@@ -1,7 +1,7 @@
 const toggle = document.querySelector('#darkmode-toggle');
 const mainImage = document.querySelector('.mainRightImg');
 const bottomWaveColor = document.querySelectorAll('.bottom-wave .shape-fill');
-const upperWaveColor = document.querySelectorAll('.upper-wave .shape-fill')
+const upperWaveColor = document.querySelectorAll('.upper-wave .shape-fill');
 
 function dark_mode(){
     if(toggle.checked){

@@ -24,9 +24,8 @@ body {
 }
 
 /*
---------------------------------HEADER-------------------------------------
+WAVES
 */
-
 .upper-wave {
     position: absolute;
     top: 0;
@@ -47,7 +46,6 @@ body {
 .upper-wave .shape-fill {
     fill: #264ACA;
 }
-
 
 .bottom-wave {
     position: absolute;
@@ -72,9 +70,9 @@ body {
     fill: #264ACA;
 }
 
-
-
-
+/*
+--------------------------------HEADER-------------------------------------
+*/
 
 header {
     position: relative;

@@ -8,10 +8,7 @@
 
 body {
     color:var(--white);
-    background: url("../png/blue_background.png");
     background-color: var(--lightBlue);
-    background-repeat: no-repeat;
-    background-size: 145%;
     font-family: 'Dosis', sans-serif;
     letter-spacing: .1rem;
 }
@@ -25,6 +22,58 @@ body {
     --red: rgba(223, 73, 91, 1);
     --darkBlue: rgba(38,74,202,1);
     --lightBlue: rgba(51,99,231,1);
+}
+
+/*
+WAVES
+*/
+.upper-wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: -10;
+}
+
+.upper-wave svg {
+    position: relative;
+    display: block;
+    width: calc(147% + 1.3px);
+    height: 154px;
+}
+
+.upper-wave .shape-fill {
+    fill: #264ACA;
+}
+
+footer {
+    position: relative;
+    height: 400px;
+}
+
+.bottom-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    z-index: -10;
+}
+
+.bottom-wave svg {
+    position: relative;
+    display: block;
+    width: calc(219% + 1.3px);
+    height: 218px;
+    transform: rotateY(180deg);
+}
+
+.bottom-wave .shape-fill {
+    fill: #264ACA;
 }
 
 /*
