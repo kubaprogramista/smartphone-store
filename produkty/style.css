@@ -799,6 +799,13 @@ main {
     }
 }
 
+@media only screen and (max-width:600px){
+    .mainRight {
+        grid-template-columns: auto;
+        margin-left: 20vw;
+    }
+}
+
 @media only screen and (max-width:530px){
     .mainLeft {
         width: 90%;
@@ -827,10 +834,6 @@ main {
 
     #headerLinks, #headerButtons {
         width: 90vw;
-    }
-
-    .mainRight {
-        grid-template-columns: auto;
     }
     
     .addToCartBtn {
