@@ -106,7 +106,7 @@ header {
 -------------------------------------------HEADER LINKS---------------------------------
 */
 
-#headerLinks {
+#header-links {
     width: 10vw;
     display:flex;
     align-items: center;
@@ -115,7 +115,7 @@ header {
     z-index: 3;
 }
 
-#headerLinks nav {
+#header-links nav {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -153,7 +153,7 @@ header {
     color: var(--red);
 }
 
-#headerLinks ul {
+#header-links ul {
     width: 100%;
     height: 100%;
     list-style: none;
@@ -162,7 +162,7 @@ header {
     align-items: center;
 }
 
-#headerLinks nav {
+#header-links nav {
     position: relative;
 }
 
@@ -502,7 +502,7 @@ main {
         font-size: 4rem;
     }
 
-    #headerLinks, #headerButtons {
+    #header-links, #headerButtons {
         background-color: rgba(0,0,0,0.1);
         position: relative;
         width: 60vw;
@@ -514,7 +514,7 @@ main {
         backdrop-filter: blur(3px);
     }
 
-    #headerLinks {
+    #header-links {
         border: 1.5px solid rgba(0,0,0,0.3);
         border-bottom: none;
         border-right: none;
@@ -526,7 +526,7 @@ main {
         border-right: none;
     }
 
-    #headerLinks.active, #headerButtons.active {
+    #header-links.active, #headerButtons.active {
         transform: translate(0%);
     }
 
@@ -534,16 +534,16 @@ main {
         justify-content: flex-end;
     }
 
-    #headerLinks ul {
+    #header-links ul {
         flex-direction: column;
         align-items: flex-end;
     }
     
-    #headerLinks a {
+    #header-links a {
         font-size: 2rem;
     }
 
-    #headerLinks li {
+    #header-links li {
         margin: 10px 0;
     }
 
@@ -576,7 +576,7 @@ main {
         margin: 15px 15px 0 0;
     }
 
-    #headerLinks, #headerButtons {
+    #header-links, #headerButtons {
         width: 90vw;
     }
 }
