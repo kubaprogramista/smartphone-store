@@ -192,7 +192,7 @@ header {
 ------------------------------------HEADER BUTTONS----------------------------------
 */
 
-#headerButtons {
+#header-buttons {
     padding: 0 170px 0 0;
     width: 24vw;
     display:flex;
@@ -424,7 +424,7 @@ main {
 */
 
 @media only screen and (max-width:1800px){
-    #headerButtons {
+    #header-buttons {
         padding: 0;
         margin: 0;
     }
@@ -502,7 +502,7 @@ main {
         font-size: 4rem;
     }
 
-    #header-links, #headerButtons {
+    #header-links, #header-buttons {
         background-color: rgba(0,0,0,0.1);
         position: relative;
         width: 60vw;
@@ -520,13 +520,13 @@ main {
         border-right: none;
     }
 
-    #headerButtons {
+    #header-buttons {
         border: 1.5px solid rgba(0,0,0,0.3);
         border-top: none;
         border-right: none;
     }
 
-    #header-links.active, #headerButtons.active {
+    #header-links.active, #header-buttons.active {
         transform: translate(0%);
     }
 
@@ -547,13 +547,13 @@ main {
         margin: 10px 0;
     }
 
-    #headerButtons {
+    #header-buttons {
         align-items: flex-end;
         justify-content: space-evenly;
         height: 20vh;
     }
 
-    #headerButtons button {
+    #header-buttons button {
         height: 50px;
         width: 150px;
     }
@@ -576,7 +576,7 @@ main {
         margin: 15px 15px 0 0;
     }
 
-    #header-links, #headerButtons {
+    #header-links, #header-buttons {
         width: 90vw;
     }
 }
