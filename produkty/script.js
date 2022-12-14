@@ -89,7 +89,6 @@ const renderProducts = (items) => {
   let lastID = 0;
   let id = 0;
   let count = 1;
-  let countNumberOfAllProducts = 0;
 
   addToCartBtns.forEach((btn) => {
     btn.addEventListener("click", (e) => {
@@ -111,10 +110,8 @@ const renderProducts = (items) => {
       const cartIfEmptyDiv = document.querySelector(".cart-if-empty");
       let productID = btn.classList[1];
 
-      let numberOfSameProducts = `${count}x`;
       const newCartProduct = document.createElement("div");
-      newCartProduct.className = `cart-product-box ${productID} count:${countNumberOfAllProducts}`;
-      ++countNumberOfAllProducts;
+      newCartProduct.className = `cart-product-box ${productID}`;
       newCartProduct.innerHTML = `<img src="${
         products[productID].image
       }" alt="product image">
@@ -128,7 +125,6 @@ const renderProducts = (items) => {
                       ).toFixed(2)
                     : products[productID].price.toFixed(2)
                 } zł</p>
-                <div class="product-counter">${numberOfSameProducts}</div>
             </section>`;
       itemPrice = products[productID].sale
         ? (products[productID].price - products[productID].saleAmount).toFixed(
@@ -144,14 +140,7 @@ const renderProducts = (items) => {
       cartItemCounter.innerHTML = countItems;
 
       cartIfEmptyDiv.classList.add("active");
-      if (count != 1) {
-        const productCounter = document.querySelector(".product-counter");
-
-        productCounter.innerHTML = `${numberOfSameProducts}`;
-        newCartProduct.innerHTML = "";
-      } else {
-        cartSection.appendChild(newCartProduct);
-      }
+      cartSection.appendChild(newCartProduct);
       lastID = id;
     });
   });
