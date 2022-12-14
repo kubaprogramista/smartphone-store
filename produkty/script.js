@@ -242,7 +242,6 @@ cartClearBtn.addEventListener("click", () => {
     "<div class='cart-if-empty'>Twój koszyk jest pusty...</div>";
   totalPrice = 0;
   countItems = 0;
-  countNumberOfAllProducts = 0;
   cartTotalPrice.innerHTML = "0 zł";
   cartItemCounter.innerHTML = "0";
 });
