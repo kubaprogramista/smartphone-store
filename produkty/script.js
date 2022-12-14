@@ -12,35 +12,49 @@ const toggle = document.querySelector("#darkmode-toggle");
 const bottomWaveColor = document.querySelectorAll(".bottom-wave .shape-fill");
 const upperWaveColor = document.querySelectorAll(".upper-wave .shape-fill");
 
-function dark_mode() {
+function darkModeHandler() {
   if (toggle.checked) {
     localStorage.setItem("theme", "dark");
-    bottomWaveColor.forEach((element) => {
-      element.style.transition = "all .3s ease-in-out";
-      element.style.fill = "#242424";
-    });
-    upperWaveColor.forEach((element) => {
-      element.style.transition = "all .3s ease-in-out";
-      element.style.fill = "#242424";
-    });
-    document.body.style.transition = "0.3s ease-in-out";
-    document.body.style.backgroundColor = "rgb(47,47,47)";
+    dark();
   } else {
     localStorage.setItem("theme", "light");
-    bottomWaveColor.forEach((element) => {
-      element.style.transition = "all .3s ease-in-out";
-      element.style.fill = "#264ACA";
-    });
-    upperWaveColor.forEach((element) => {
-      element.style.transition = "all .3s ease-in-out";
-      element.style.fill = "#264ACA";
-    });
-    document.body.style.transition = "0.3s ease-in-out";
-    document.body.style.backgroundColor = "rgb(51,99,231)";
+    light();
   }
-  if (localStorage.getItem("theme") === "dark") {
-    console.log(localStorage.getItem("isDark"));
-  }
+}
+
+let theme = localStorage.getItem("theme");
+if (theme === "dark") {
+  dark();
+} else if (theme === "light") {
+  light();
+}
+
+function dark() {
+  toggle.checked = true;
+  bottomWaveColor.forEach((element) => {
+    element.style.transition = "all .3s ease-in-out";
+    element.style.fill = "#242424";
+  });
+  upperWaveColor.forEach((element) => {
+    element.style.transition = "all .3s ease-in-out";
+    element.style.fill = "#242424";
+  });
+  document.body.style.transition = "0.3s ease-in-out";
+  document.body.style.backgroundColor = "rgb(47,47,47)";
+}
+
+function light() {
+  toggle.checked = false;
+  bottomWaveColor.forEach((element) => {
+    element.style.transition = "all .3s ease-in-out";
+    element.style.fill = "#264ACA";
+  });
+  upperWaveColor.forEach((element) => {
+    element.style.transition = "all .3s ease-in-out";
+    element.style.fill = "#264ACA";
+  });
+  document.body.style.transition = "0.3s ease-in-out";
+  document.body.style.backgroundColor = "rgb(51,99,231)";
 }
 
 /*
