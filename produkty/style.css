@@ -248,11 +248,17 @@ header {
   height: auto;
   padding: 20px;
   cursor: default;
+  transition: all 0.3s ease-in-out;
 }
 
 .cart-window.active {
   z-index: 1;
   display: block;
+}
+
+.cart-window.dark {
+  background: rgb(20, 20, 20);
+  color: rgb(240, 240, 240);
 }
 
 .cart-header {

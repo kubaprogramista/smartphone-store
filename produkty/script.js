@@ -39,8 +39,7 @@ function dark() {
     element.style.transition = "all .3s ease-in-out";
     element.style.fill = "#242424";
   });
-  document.querySelector(".cart-window").style.background = "rgb(20,20,20)";
-  document.querySelector(".cart-window").style.color = "rgb(240,240,240)";
+  document.querySelector(".cart-window").classList.add("dark");
   document.body.style.transition = "0.3s ease-in-out";
   document.body.style.backgroundColor = "rgb(47,47,47)";
 }
@@ -55,6 +54,7 @@ function light() {
     element.style.transition = "all .3s ease-in-out";
     element.style.fill = "#264ACA";
   });
+  document.querySelector(".cart-window").classList.remove("dark");
   document.body.style.transition = "0.3s ease-in-out";
   document.body.style.backgroundColor = "rgb(51,99,231)";
 }
