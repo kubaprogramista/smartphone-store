@@ -14,6 +14,7 @@ const upperWaveColor = document.querySelectorAll(".upper-wave .shape-fill");
 
 function dark_mode() {
   if (toggle.checked) {
+    localStorage.setItem("isDark", true);
     bottomWaveColor.forEach((element) => {
       element.style.transition = "all .3s ease-in-out";
       element.style.fill = "#242424";
@@ -25,6 +26,7 @@ function dark_mode() {
     document.body.style.transition = "0.3s ease-in-out";
     document.body.style.backgroundColor = "rgb(47,47,47)";
   } else {
+    localStorage.setItem("isDark", false);
     bottomWaveColor.forEach((element) => {
       element.style.transition = "all .3s ease-in-out";
       element.style.fill = "#264ACA";
@@ -35,6 +37,9 @@ function dark_mode() {
     });
     document.body.style.transition = "0.3s ease-in-out";
     document.body.style.backgroundColor = "rgb(51,99,231)";
+  }
+  if (localStorage.getItem("isDark") === true) {
+    console.log(localStorage.getItem("isDark"));
   }
 }
 
