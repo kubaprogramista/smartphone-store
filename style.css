@@ -433,8 +433,8 @@ main {
     width: 100%;
   }
 
-  #header-shop-name {
-    position: relative;
+  #header-buttons {
+    justify-content: space-evenly;
   }
 }
 
@@ -445,6 +445,10 @@ main {
 
   body {
     overflow-x: hidden;
+  }
+
+  #header-shop-name {
+    position: relative;
   }
 
   main {
