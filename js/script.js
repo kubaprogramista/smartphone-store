@@ -79,6 +79,8 @@ responsiveList.addEventListener("click", function () {
 const cartSection = document.querySelector(".cart-products");
 const cartTotalPrice = document.querySelector(".cart-total-price");
 const productsSection = document.querySelector(".mainRight");
+let cartProductsQuantity = [];
+let cartProducts = [];
 
 const renderProducts = (items) => {
   productsSection.innerHTML = "";
@@ -107,46 +109,19 @@ const renderProducts = (items) => {
   /*Dodawanie przedmiotów do koszyka*/
 
   addToCartBtns = document.querySelectorAll(".addToCartBtn");
-  let lastID = 0;
   let id = 0;
-  let count = 1;
 
   addToCartBtns.forEach((btn) => {
+    cartProductsQuantity.push(0);
     btn.addEventListener("click", (e) => {
-      if (e.path.length === 10) {
-        id = e.path[1].classList[1];
-        if (lastID === id) {
-          ++count;
-        } else {
-          count = 1;
-        }
-      } else {
-        id = e.path[1].classList[1];
-        if (lastID === id) {
-          ++count;
-        } else {
-          count = 1;
-        }
-      }
       const cartIfEmptyDiv = document.querySelector(".cart-if-empty");
       let productID = btn.classList[1];
+      cartProductsQuantity[productID]++;
+      let cartItem = createCartItem(productID, products);
 
-      const newCartProduct = document.createElement("div");
-      newCartProduct.className = `cart-product-box ${productID}`;
-      newCartProduct.innerHTML = `<img src="${
-        products[productID].image
-      }" alt="product image">
-            <section class="cart-product-info">
-                <p class="cart-product-name">${products[productID].name}</p>
-                <p class="cart-product-price">${
-                  products[productID].sale
-                    ? (
-                        products[productID].price -
-                        products[productID].saleAmount
-                      ).toFixed(2)
-                    : products[productID].price.toFixed(2)
-                } zł</p>
-            </section>`;
+      const cartProductCountContainer = document.createElement("div");
+      cartProductCountContainer.innerHTML = `${cartProductsQuantity[productID]}`;
+
       itemPrice = products[productID].sale
         ? (products[productID].price - products[productID].saleAmount).toFixed(
             2
@@ -159,13 +134,49 @@ const renderProducts = (items) => {
       const cartItemCounter = document.querySelector(".cart-notification");
       countItems++;
       cartItemCounter.innerHTML = countItems;
-
       cartIfEmptyDiv.classList.add("active");
-      cartSection.appendChild(newCartProduct);
+
+      cartProducts.push(cartItem);
+      if (cartProducts.includes(cartItem.classList[1])) {
+        cartProducts.push(cartItem);
+      } else {
+        console.log("XD");
+      }
+
+      console.log(cartProducts);
+      console.log(cartItem.classList[1]);
+
+      if (cartProducts.includes(cartItem)) {
+        cartItem.appendChild(cartProductCountContainer);
+        cartProductsQuantity.forEach(() => {
+          cartSection.appendChild(cartProducts[cartProducts.length - 1]);
+        });
+      }
+
       lastID = id;
     });
   });
 };
+
+function createCartItem(productID, products) {
+  const newCartProduct = document.createElement("div");
+  newCartProduct.className = `cart-product-box ${productID}`;
+  newCartProduct.innerHTML = `<img src="${
+    products[productID].image
+  }" alt="product image">
+            <section class="cart-product-info">
+                <p class="cart-product-name">${products[productID].name}</p>
+                <p class="cart-product-price">${
+                  products[productID].sale
+                    ? (
+                        products[productID].price -
+                        products[productID].saleAmount
+                      ).toFixed(2)
+                    : products[productID].price.toFixed(2)
+                } zł</p>
+            </section>`;
+  return newCartProduct;
+}
 
 /* 
 ----------------------------------------------TWORZENIE KATEGORII-------------------------------------
@@ -258,6 +269,12 @@ const cartClearBtn = document.querySelector(".cart-clear-button");
 cartClearBtn.addEventListener("click", () => {
   const cartIfEmptyDiv = document.querySelector(".cart-if-empty");
   const cartItemCounter = document.querySelector(".cart-notification");
+
+  cartProductsQuantity = [];
+  cartProducts = [];
+  addToCartBtns.forEach(() => {
+    cartProductsQuantity.push(0);
+  });
 
   cartSection.innerHTML =
     "<div class='cart-if-empty'>Twój koszyk jest pusty...</div>";
