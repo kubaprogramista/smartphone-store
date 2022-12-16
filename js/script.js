@@ -110,7 +110,7 @@ const renderProducts = (items) => {
 
   addToCartBtns = document.querySelectorAll(".addToCartBtn");
   let id = 0;
-
+  let isCartEmpty = true;
   addToCartBtns.forEach((btn) => {
     cartProductsQuantity.push(0);
     btn.addEventListener("click", (e) => {
@@ -136,22 +136,22 @@ const renderProducts = (items) => {
       cartItemCounter.innerHTML = countItems;
       cartIfEmptyDiv.classList.add("active");
 
-      cartProducts.push(cartItem);
-      if (cartProducts.includes(cartItem.classList[1])) {
+      if (isCartEmpty) {
         cartProducts.push(cartItem);
+        isCartEmpty = false;
       } else {
-        console.log("XD");
+        if (cartProducts[0].className == cartItem.className) {
+          cartProducts.push(cartItem);
+        } else {
+          cartSection.appendChild(cartItem);
+          console.log("nie takie same");
+        }
       }
 
-      console.log(cartProducts);
-      console.log(cartItem.classList[1]);
-
-      if (cartProducts.includes(cartItem)) {
-        cartItem.appendChild(cartProductCountContainer);
-        cartProductsQuantity.forEach(() => {
-          cartSection.appendChild(cartProducts[cartProducts.length - 1]);
-        });
-      }
+      cartItem.appendChild(cartProductCountContainer);
+      cartProductsQuantity.forEach(() => {
+        cartSection.appendChild(cartProducts[cartProducts.length - 1]);
+      });
 
       lastID = id;
     });
@@ -269,7 +269,7 @@ const cartClearBtn = document.querySelector(".cart-clear-button");
 cartClearBtn.addEventListener("click", () => {
   const cartIfEmptyDiv = document.querySelector(".cart-if-empty");
   const cartItemCounter = document.querySelector(".cart-notification");
-
+  isCartEmpty = true;
   cartProductsQuantity = [];
   cartProducts = [];
   addToCartBtns.forEach(() => {
