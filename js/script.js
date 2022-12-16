@@ -117,11 +117,13 @@ const renderProducts = (items) => {
       const cartIfEmptyDiv = document.querySelector(".cart-if-empty");
       let productID = btn.classList[1];
       cartProductsQuantity[productID]++;
+
       let cartItem = createCartItem(productID, products);
 
       const cartProductCountContainer = document.createElement("div");
       cartProductCountContainer.innerHTML = `${cartProductsQuantity[productID]}`;
 
+      //total price handler
       itemPrice = products[productID].sale
         ? (products[productID].price - products[productID].saleAmount).toFixed(
             2
@@ -131,6 +133,7 @@ const renderProducts = (items) => {
       totalPrice += itemPrice;
       cartTotalPrice.innerHTML = `${totalPrice.toFixed(2)} zł`;
 
+      //green counter
       const cartItemCounter = document.querySelector(".cart-notification");
       countItems++;
       cartItemCounter.innerHTML = countItems;
