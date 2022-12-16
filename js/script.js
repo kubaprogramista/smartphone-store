@@ -136,6 +136,7 @@ const renderProducts = (items) => {
       cartItemCounter.innerHTML = countItems;
       cartIfEmptyDiv.classList.add("active");
 
+      isCartEmpty = true;
       if (isCartEmpty) {
         cartProducts.push(cartItem);
         isCartEmpty = false;
@@ -143,17 +144,16 @@ const renderProducts = (items) => {
         if (cartProducts[0].className == cartItem.className) {
           cartProducts.push(cartItem);
         } else {
+          cartProducts.push(cartItem);
           cartSection.appendChild(cartItem);
           console.log("nie takie same");
         }
       }
 
-      if (cartProducts.includes(cartItem)) {
-        cartItem.appendChild(cartProductCountContainer);
-        cartProductsQuantity.forEach(() => {
-          cartSection.appendChild(cartProducts[cartProducts.length - 1]);
-        });
-      }
+      cartItem.appendChild(cartProductCountContainer);
+      cartProductsQuantity.forEach(() => {
+        cartSection.appendChild(cartProducts[cartProducts.length - 1]);
+      });
 
       lastID = id;
     });
