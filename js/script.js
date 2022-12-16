@@ -148,10 +148,12 @@ const renderProducts = (items) => {
         }
       }
 
-      cartItem.appendChild(cartProductCountContainer);
-      cartProductsQuantity.forEach(() => {
-        cartSection.appendChild(cartProducts[cartProducts.length - 1]);
-      });
+      if (cartProducts.includes(cartItem)) {
+        cartItem.appendChild(cartProductCountContainer);
+        cartProductsQuantity.forEach(() => {
+          cartSection.appendChild(cartProducts[cartProducts.length - 1]);
+        });
+      }
 
       lastID = id;
     });
