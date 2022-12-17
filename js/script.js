@@ -143,10 +143,8 @@ const renderProducts = (items) => {
         //if clicked item is already in cart
         const counterContainers = document.querySelectorAll(".cart-counter");
         counterContainers.forEach((container) => {
-          console.log(container.classList[1]);
           if (container.classList[1] === productID) {
             container.innerHTML = `${cartProductsQuantity[productID]}x`;
-            console.log(container);
           }
         });
         cartItem.appendChild(counterContainer);
