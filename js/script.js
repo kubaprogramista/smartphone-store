@@ -138,16 +138,15 @@ const renderProducts = (items) => {
       cartIfEmptyDiv.classList.add("active");
 
       //count same items in cart
-      const cartProductCountContainer = document.createElement("div");
-      cartProductCountContainer.className = `cartCounter ${productID}`;
-      cartProductCountContainer.innerHTML = `${cartProductsQuantity[productID]}x`;
-      console.log(`${cartProductsQuantity[productID]}x`);
-      console.log(cartProductsQuantity[productID]);
+      let counterContainer = createCartCounter(productID);
       if (cartProductsClassNames.includes(cartItem.classList[1])) {
         //if clicked item is already in cart
-        cartItem.appendChild(cartProductCountContainer);
+        document.querySelector(
+          ".cart-counter"
+        ).innerHTML = `${cartProductsQuantity[productID]}x`;
+        cartItem.appendChild(counterContainer);
       } else {
-        cartItem.appendChild(cartProductCountContainer);
+        cartItem.appendChild(counterContainer);
         cartProducts.push(cartItem);
         cartProductsClassNames.push(
           cartProducts[cartProducts.indexOf(cartItem)].classList[1]
@@ -155,11 +154,19 @@ const renderProducts = (items) => {
       }
 
       cartSection.appendChild(cartProducts[cartProducts.length - 1]);
-      console.log(cartSection);
+      console.log(document.querySelector(".cart-counter"));
       lastID = id;
     });
   });
 };
+
+function createCartCounter(productID) {
+  const cartProductCountContainer = document.createElement("div");
+  cartProductCountContainer.innerHTML = "";
+  cartProductCountContainer.className = `cart-counter ${productID}`;
+  cartProductCountContainer.innerHTML = `${cartProductsQuantity[productID]}x`;
+  return cartProductCountContainer;
+}
 
 function createCartItem(productID, products) {
   const newCartProduct = document.createElement("div");
