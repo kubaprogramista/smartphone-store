@@ -139,14 +139,14 @@ const renderProducts = (items) => {
 
       //count same items in cart
       const cartProductCountContainer = document.createElement("div");
-
-      // console.log(cartProductsQuantity);
+      cartProductCountContainer.className = `cartCounter ${productID}`;
+      cartProductCountContainer.innerHTML = `${cartProductsQuantity[productID]}x`;
+      console.log(`${cartProductsQuantity[productID]}x`);
+      console.log(cartProductsQuantity[productID]);
       if (cartProductsClassNames.includes(cartItem.classList[1])) {
         //if clicked item is already in cart
-        cartProductCountContainer.innerHTML = `${cartProductsQuantity[productID]}x`;
         cartItem.appendChild(cartProductCountContainer);
       } else {
-        cartProductCountContainer.innerHTML = `${cartProductsQuantity[productID]}x`;
         cartItem.appendChild(cartProductCountContainer);
         cartProducts.push(cartItem);
         cartProductsClassNames.push(
