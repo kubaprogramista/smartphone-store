@@ -343,6 +343,9 @@ header {
 }
 
 .cart-clear-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--lightBlue);
   color: var(--white);
   font-weight: bold;
@@ -598,7 +601,8 @@ main {
 }
 
 .productBox img {
-  width: 90%;
+  width: 225px;
+  height: 194px;
 }
 
 .productName {
