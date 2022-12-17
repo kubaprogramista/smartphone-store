@@ -282,9 +282,10 @@ const cartClearBtn = document.querySelector(".cart-clear-button");
 cartClearBtn.addEventListener("click", () => {
   const cartIfEmptyDiv = document.querySelector(".cart-if-empty");
   const cartItemCounter = document.querySelector(".cart-notification");
-  isCartEmpty = true;
+
   cartProductsQuantity = [];
   cartProducts = [];
+  cartProductsClassNames = [];
   addToCartBtns.forEach(() => {
     cartProductsQuantity.push(0);
   });
