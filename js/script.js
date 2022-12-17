@@ -48,6 +48,7 @@ function light() {
   toggle.checked = false;
   bottomWaveColor.forEach((element) => {
     element.style.transition = "all .3s ease-in-out";
+    onsive - list;
     element.style.fill = "#264ACA";
   });
   upperWaveColor.forEach((element) => {
@@ -63,9 +64,9 @@ function light() {
 ----------------------------------------RESPONSYWNA LISTA NA PRZYCISK----------------------------------
 */
 
-const responsiveList = document.querySelector(".responsiveList");
-const mobileHeaderLinks = document.querySelector("#headerLinks");
-const mobileHeaderButtons = document.querySelector("#headerButtons");
+const responsiveList = document.querySelector(".responsive-list");
+const mobileHeaderLinks = document.querySelector("#header-links");
+const mobileHeaderButtons = document.querySelector("#header-buttons");
 
 responsiveList.addEventListener("click", function () {
   mobileHeaderLinks.classList.toggle("active");
@@ -78,7 +79,7 @@ responsiveList.addEventListener("click", function () {
 */
 const cartSection = document.querySelector(".cart-products");
 const cartTotalPrice = document.querySelector(".cart-total-price");
-const productsSection = document.querySelector(".mainRight");
+const productsSection = document.querySelector(".main-right");
 let cartProductsQuantity = [];
 let cartProducts = [];
 let cartProductsClassNames = [];
@@ -87,20 +88,22 @@ const renderProducts = (items) => {
   productsSection.innerHTML = "";
   for (let i = 0; i < items.length; i++) {
     const newProduct = document.createElement("div");
-    newProduct.className = `productBox ${items[i].category} ${
+    newProduct.className = `product-box ${items[i].category} ${
       items[i].sale ? "onSale" : ""
     }`;
     newProduct.innerHTML = `
-        <img src="${items[i].image}" alt="product image">
-        <p class="productName">${items[i].name}</p>
-        <p class="productDesc">${items[i].description}</p>
-        <div class="productPrice">
+        <img src="${
+          items[i].image
+        }" alt="product image" class="product-box-img">
+        <p class="product-name">${items[i].name}</p>
+        <p class="product-desc">${items[i].description}</p>
+        <div class="product-price">
             <span class="price">${items[i].price.toFixed(2)} zł</span>
-            <span class="priceSale">${(
+            <span class="price-sale">${(
               items[i].price - items[i].saleAmount
             ).toFixed(2)} zł</span>
         </div>
-        <button class="addToCartBtn ${
+        <button class="add-to-cart-btn ${
           items[i].id
         }"><img src="../png/add-to-cart.png" alt="add to cart"></button>
         <div class="product-sale-info">Promocja</div>`;
@@ -109,7 +112,7 @@ const renderProducts = (items) => {
 
   /*Dodawanie przedmiotów do koszyka*/
 
-  addToCartBtns = document.querySelectorAll(".addToCartBtn");
+  addToCartBtns = document.querySelectorAll(".add-to-cart-btn");
   let id = 0;
   let isCartEmpty = true;
   addToCartBtns.forEach((btn) => {
@@ -305,7 +308,7 @@ PROMOCJE
 const productsOnSaleBtn = document.querySelector("#products-on-sale");
 
 productsOnSaleBtn.addEventListener("click", (e) => {
-  document.querySelector(".mainLeft").classList.add("active");
+  document.querySelector(".main-left").classList.add("active");
 
   currentProducts = currentProducts.filter((product) => product.sale === true);
   renderProducts(currentProducts);

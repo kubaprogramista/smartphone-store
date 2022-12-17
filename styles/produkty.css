@@ -118,16 +118,17 @@ header {
   display: flex;
   flex-wrap: wrap;
   height: 10vh;
+  z-index: 2;
 }
 
-#headerShopName {
+#header-shop-name {
   display: flex;
   justify-content: right;
   align-items: center;
   width: 20vw;
 }
 
-#headerShopName > a {
+#header-shop-name > a {
   text-decoration: none;
   text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.7);
   font-size: 3.2rem;
@@ -140,14 +141,14 @@ header {
 -------------------------------------------HEADER LINKS---------------------------------
 */
 
-#headerLinks {
+#header-links {
   width: 55vw;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
 
-#headerLinks nav {
+#header-links nav {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -185,7 +186,7 @@ header {
   color: var(--red);
 }
 
-#headerLinks ul {
+#header-links ul {
   width: 100%;
   height: 100%;
   list-style: none;
@@ -194,7 +195,7 @@ header {
   align-items: center;
 }
 
-#headerLinks nav {
+#header-links nav {
   position: relative;
 }
 
@@ -202,7 +203,7 @@ header {
 ---------------------------------------RESPONSIVE LIST-------------------------
 */
 
-.responsiveList {
+.responsive-list {
   background: transparent;
   border: none;
   outline: none;
@@ -223,7 +224,7 @@ header {
 ------------------------------------HEADER BUTTONS----------------------------------
 */
 
-#headerButtons {
+#header-buttons {
   padding: 0 70px 0 0;
   width: 24vw;
   display: flex;
@@ -232,7 +233,7 @@ header {
   flex-wrap: wrap;
 }
 
-.redButtons {
+.red-buttons {
   height: 40px;
   width: 130px;
   background-color: var(--red);
@@ -249,12 +250,12 @@ header {
   transition: 0.3s ease-in-out;
 }
 
-.redButtons:hover {
+.red-buttons:hover {
   background-color: rgba(25, 25, 25, 0.6);
   cursor: pointer;
 }
 
-.redButtons img {
+.red-buttons img {
   height: 20px;
 }
 
@@ -498,23 +499,18 @@ body {
 --------------------------------------MAIN--------------------------------------
 */
 
-header {
-  z-index: 2;
-  position: relative;
-}
-
 main {
   width: 100vw;
   height: 100%;
   position: relative;
 }
 
-.mainFlex {
+.main-flex {
   display: flex;
   margin: 2vh 5vw;
 }
 
-.mainLeft {
+.main-left {
   width: 20vw;
   height: 100%;
   margin-right: 2vw;
@@ -530,11 +526,11 @@ main {
   cursor: default;
 }
 
-.mainLeft.active {
+.main-left.active {
   display: none;
 }
 
-.mainLeft button {
+.main-left button {
   display: block;
   width: 200px;
   margin: 0 auto;
@@ -549,11 +545,11 @@ main {
   text-shadow: 0 0.5px 2px rgba(0, 0, 0, 0.3);
 }
 
-.mainLeft button:hover {
+.main-left button:hover {
   color: rgba(223, 73, 91, 1);
 }
 
-.mainLeft button::first-letter {
+.main-left button::first-letter {
   text-transform: uppercase;
 }
 
@@ -567,7 +563,7 @@ main {
   font-size: 2rem;
 }
 
-.mainRight {
+.main-right {
   width: 70vw;
   margin: 0 2vw;
   display: grid;
@@ -576,7 +572,7 @@ main {
   cursor: default;
 }
 
-.productBox {
+.product-box {
   width: 270px;
   height: 400px;
   border-radius: 20px;
@@ -589,49 +585,49 @@ main {
   transition: all 0.3s ease-in-out;
 }
 
-.productBox:hover {
+.product-box:hover {
   border: 1px solid rgba(255, 255, 255, 0.18);
   background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
   backdrop-filter: blur(10px);
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4);
 }
 
-.productBox:hover button {
+.product-box:hover button {
   display: block;
 }
 
-.productBox img {
+.product-box-img {
   width: 225px;
   height: 194px;
 }
 
-.productName {
+.product-name {
   margin: 4px 0;
   font-size: 1.4rem;
   font-weight: bold;
 }
 
-.productPrice {
+.product-price {
   position: absolute;
   left: 15px;
   bottom: 10px;
   font-size: 1.6rem;
 }
 
-.priceSale {
+.price-sale {
   display: none;
 }
 
-.productBox.onSale .priceSale {
+.product-box.onSale .price-sale {
   display: block;
 }
 
-.productBox.onSale .price {
+.product-box.onSale .price {
   color: black;
   font-size: 1.2rem;
 }
 
-.productBox.onSale .price::before {
+.product-box.onSale .price::before {
   content: "";
   position: absolute;
   left: -5%;
@@ -642,13 +638,13 @@ main {
   transform: rotate(-170deg);
 }
 
-.productDesc {
+.product-desc {
   font-size: 0.8rem;
   color: #dbd8c3;
   text-align: center;
 }
 
-.addToCartBtn {
+.add-to-cart-btn {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -667,11 +663,11 @@ main {
   transition: all 0.3s ease-in-out;
 }
 
-.addToCartBtn:hover {
+.add-to-cart-btn:hover {
   background-color: var(--green);
 }
 
-.addToCartBtn img {
+.add-to-cart-btn img {
   width: 35px;
   position: absolute;
   top: 5px;
@@ -682,7 +678,7 @@ main {
   display: none;
 }
 
-.productBox.onSale .product-sale-info {
+.product-box.onSale .product-sale-info {
   display: block;
   background-color: rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(0, 0, 0, 0.4);
@@ -700,19 +696,19 @@ main {
 */
 
 @media only screen and (max-width: 1800px) {
-  .mainRight {
+  .main-right {
     grid-template-columns: auto auto auto;
   }
 
-  #headerLinks {
+  #header-links {
     width: 49vw;
   }
 
-  #headerButtons {
+  #header-buttons {
     width: 30vw;
   }
 
-  .mainLeft {
+  .main-left {
     width: 30%;
   }
 }
@@ -722,7 +718,7 @@ main {
     top: 130px;
   }
 
-  #headerButtons {
+  #header-buttons {
     padding: 0;
     margin: 0;
   }
@@ -731,11 +727,11 @@ main {
     padding: 0;
   }
 
-  .mainLeft {
+  .main-left {
     width: 55%;
   }
 
-  .mainRight {
+  .main-right {
     width: 100%;
   }
 
@@ -743,7 +739,7 @@ main {
     overflow-x: hidden;
   }
 
-  .responsiveList {
+  .responsive-list {
     display: block;
     position: absolute;
     right: 0;
@@ -751,27 +747,27 @@ main {
     transition: 0.3s;
   }
 
-  .responsiveList.active .line:first-child {
+  .responsive-list.active .line:first-child {
     transform: translateY(-300px);
   }
-  .responsiveList.active .line:nth-child(2) {
+  .responsive-list.active .line:nth-child(2) {
     transform: rotate(220deg);
   }
-  .responsiveList.active .line:nth-child(3) {
+  .responsive-list.active .line:nth-child(3) {
     transform: translateY(-14px) rotate(-220deg);
   }
 
-  #headerShopName {
+  #header-shop-name {
     width: 100vw;
     justify-content: center;
   }
 
-  #headerShopName a {
+  #header-shop-name a {
     font-size: 4rem;
   }
 
-  #headerLinks,
-  #headerButtons {
+  #header-links,
+  #header-buttons {
     background-color: rgba(0, 0, 0, 0.1);
     position: relative;
     width: 60vw;
@@ -783,20 +779,20 @@ main {
     backdrop-filter: blur(3px);
   }
 
-  #headerLinks {
+  #header-links {
     border: 1.5px solid rgba(0, 0, 0, 0.3);
     border-bottom: none;
     border-right: none;
   }
 
-  #headerButtons {
+  #header-buttons {
     border: 1.5px solid rgba(0, 0, 0, 0.3);
     border-top: none;
     border-right: none;
   }
 
-  #headerLinks.active,
-  #headerButtons.active {
+  #header-links.active,
+  #header-buttons.active {
     transform: translate(0%);
   }
 
@@ -804,26 +800,26 @@ main {
     justify-content: flex-end;
   }
 
-  #headerLinks ul {
+  #header-links ul {
     flex-direction: column;
     align-items: flex-end;
   }
 
-  #headerLinks a {
+  #header-links a {
     font-size: 2rem;
   }
 
-  #headerLinks li {
+  #header-links li {
     margin: 10px 0;
   }
 
-  #headerButtons {
+  #header-buttons {
     align-items: flex-end;
     justify-content: space-evenly;
     height: 20vh;
   }
 
-  #headerButtons button {
+  #header-buttons button {
     height: 50px;
     width: 150px;
   }
@@ -834,17 +830,17 @@ main {
 }
 
 @media only screen and (max-width: 1300px) {
-  .mainRight {
+  .main-right {
     grid-template-columns: auto auto;
   }
 
-  .mainLeft {
+  .main-left {
     padding: 15px 25px;
   }
 }
 
 @media only screen and (max-width: 860px) {
-  .mainFlex {
+  .main-flex {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -852,44 +848,44 @@ main {
 }
 
 @media only screen and (max-width: 600px) {
-  .mainRight {
+  .main-right {
     grid-template-columns: auto;
     margin-left: 20vw;
   }
 }
 
 @media only screen and (max-width: 530px) {
-  .mainLeft {
+  .main-left {
     width: 90%;
   }
 
-  .mainRight {
+  .main-right {
     margin: 2vh;
     padding: 0 8vw;
   }
 
-  #headerShopName a {
+  #header-shop-name a {
     font-size: 3rem;
   }
 
-  #headerShopName {
+  #header-shop-name {
     justify-content: left;
     padding: 6px;
   }
 
-  .responsiveList {
+  .responsive-list {
     display: block;
     position: absolute;
     right: 0;
     margin: 15px 15px 0 0;
   }
 
-  #headerLinks,
-  #headerButtons {
+  #header-links,
+  #header-buttons {
     width: 90vw;
   }
 
-  .addToCartBtn {
+  .add-to-cart-btn {
     display: block;
   }
 }
