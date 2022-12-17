@@ -81,6 +81,7 @@ const cartTotalPrice = document.querySelector(".cart-total-price");
 const productsSection = document.querySelector(".mainRight");
 let cartProductsQuantity = [];
 let cartProducts = [];
+let cartProductsClassNames = [];
 
 const renderProducts = (items) => {
   productsSection.innerHTML = "";
@@ -121,7 +122,7 @@ const renderProducts = (items) => {
       let cartItem = createCartItem(productID, products);
 
       const cartProductCountContainer = document.createElement("div");
-      cartProductCountContainer.innerHTML = `${cartProductsQuantity[productID]}`;
+      cartProductCountContainer.innerHTML = `${cartProductsQuantity[productID]}x`;
 
       //total price handler
       itemPrice = products[productID].sale
@@ -133,31 +134,28 @@ const renderProducts = (items) => {
       totalPrice += itemPrice;
       cartTotalPrice.innerHTML = `${totalPrice.toFixed(2)} zł`;
 
-      //green counter
+      //green notif counter
       const cartItemCounter = document.querySelector(".cart-notification");
       countItems++;
       cartItemCounter.innerHTML = countItems;
       cartIfEmptyDiv.classList.add("active");
 
-      isCartEmpty = true;
-      if (isCartEmpty) {
-        cartProducts.push(cartItem);
-        isCartEmpty = false;
+      //count same items in cart
+      // console.log(cartProductsQuantity);
+      if (cartProductsClassNames.includes(cartItem.classList[1])) {
+        //if clicked item is already in cart
+        console.log("istnieje już w koszyku");
       } else {
-        if (cartProducts[0].className == cartItem.className) {
-          cartProducts.push(cartItem);
-        } else {
-          cartProducts.push(cartItem);
-          cartSection.appendChild(cartItem);
-          console.log("nie takie same");
-        }
+        cartProducts.push(cartItem);
+        cartProductsClassNames.push(
+          cartProducts[cartProducts.indexOf(cartItem)].classList[1]
+        );
+
+        console.log("nie takie same");
       }
 
-      cartItem.appendChild(cartProductCountContainer);
-      cartProductsQuantity.forEach(() => {
-        cartSection.appendChild(cartProducts[cartProducts.length - 1]);
-      });
-
+      cartSection.appendChild(cartProductCountContainer);
+      cartSection.appendChild(cartProducts[cartProducts.length - 1]);
       lastID = id;
     });
   });
