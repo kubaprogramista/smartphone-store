@@ -312,6 +312,7 @@ header {
 }
 
 .cart-product-box {
+  position: relative;
   display: flex;
   margin: 25px 15px 25px 15px;
 }
@@ -406,6 +407,13 @@ header {
   justify-content: center;
   align-items: center;
   font-weight: 100;
+  font-size: 1.2rem;
+}
+
+.cart-counter {
+  position: absolute;
+  right: 0;
+  top: 30px;
   font-size: 1.2rem;
 }
 
