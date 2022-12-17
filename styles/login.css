@@ -116,6 +116,7 @@ footer {
 header {
   position: relative;
   display: flex;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   height: 10vh;
   z-index: 2;
@@ -142,7 +143,6 @@ header {
 */
 
 #header-links {
-  width: 55vw;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -226,7 +226,6 @@ header {
 
 #header-buttons {
   padding: 0 70px 0 0;
-  width: 24vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
