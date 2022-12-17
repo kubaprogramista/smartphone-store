@@ -49,10 +49,12 @@ function light() {
 }
 
 const responsiveList = document.querySelector(".responsive-list");
+const mobileHeaderWrapper = document.querySelector(".header-wrapper");
 const mobileHeaderLinks = document.querySelector("#header-links");
 const mobileHeaderButtons = document.querySelector("#header-buttons");
 
 responsiveList.addEventListener("click", function () {
+  mobileHeaderWrapper.classList.toggle("active");
   mobileHeaderLinks.classList.toggle("active");
   mobileHeaderButtons.classList.toggle("active");
   responsiveList.classList.toggle("active");
