@@ -121,9 +121,6 @@ const renderProducts = (items) => {
 
       let cartItem = createCartItem(productID, products);
 
-      const cartProductCountContainer = document.createElement("div");
-      cartProductCountContainer.innerHTML = `${cartProductsQuantity[productID]}x`;
-
       //total price handler
       itemPrice = products[productID].sale
         ? (products[productID].price - products[productID].saleAmount).toFixed(
@@ -141,21 +138,24 @@ const renderProducts = (items) => {
       cartIfEmptyDiv.classList.add("active");
 
       //count same items in cart
+      const cartProductCountContainer = document.createElement("div");
+
       // console.log(cartProductsQuantity);
       if (cartProductsClassNames.includes(cartItem.classList[1])) {
         //if clicked item is already in cart
-        console.log("istnieje już w koszyku");
+        cartProductCountContainer.innerHTML = `${cartProductsQuantity[productID]}x`;
+        cartItem.appendChild(cartProductCountContainer);
       } else {
+        cartProductCountContainer.innerHTML = `${cartProductsQuantity[productID]}x`;
+        cartItem.appendChild(cartProductCountContainer);
         cartProducts.push(cartItem);
         cartProductsClassNames.push(
           cartProducts[cartProducts.indexOf(cartItem)].classList[1]
         );
-
-        console.log("nie takie same");
       }
 
-      cartSection.appendChild(cartProductCountContainer);
       cartSection.appendChild(cartProducts[cartProducts.length - 1]);
+      console.log(cartSection);
       lastID = id;
     });
   });
