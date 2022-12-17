@@ -141,9 +141,14 @@ const renderProducts = (items) => {
       let counterContainer = createCartCounter(productID);
       if (cartProductsClassNames.includes(cartItem.classList[1])) {
         //if clicked item is already in cart
-        document.querySelector(
-          ".cart-counter"
-        ).innerHTML = `${cartProductsQuantity[productID]}x`;
+        const counterContainers = document.querySelectorAll(".cart-counter");
+        counterContainers.forEach((container) => {
+          console.log(container.classList[1]);
+          if (container.classList[1] === productID) {
+            container.innerHTML = `${cartProductsQuantity[productID]}x`;
+            console.log(container);
+          }
+        });
         cartItem.appendChild(counterContainer);
       } else {
         cartItem.appendChild(counterContainer);
@@ -154,7 +159,7 @@ const renderProducts = (items) => {
       }
 
       cartSection.appendChild(cartProducts[cartProducts.length - 1]);
-      console.log(document.querySelector(".cart-counter"));
+      // console.log(document.querySelector(".cart-counter"));
       lastID = id;
     });
   });
