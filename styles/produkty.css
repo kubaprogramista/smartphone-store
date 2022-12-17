@@ -156,7 +156,7 @@ header {
   height: auto;
 }
 
-.hLink {
+.h-link {
   font-size: 1.3rem;
   color: var(--white);
   text-decoration: none;
@@ -166,7 +166,7 @@ header {
   transition: 0.3s ease-in-out;
 }
 
-.hLink:after {
+.h-link:after {
   content: "";
   position: absolute;
   background-color: var(--red);
@@ -177,11 +177,11 @@ header {
   border-radius: 1px;
   transition: 0.3s ease-in-out;
 }
-.hLink:hover:after {
+.h-link:hover:after {
   width: 100%;
 }
 
-.hLink:hover {
+.h-link:hover {
   color: var(--red);
 }
 

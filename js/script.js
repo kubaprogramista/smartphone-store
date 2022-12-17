@@ -191,6 +191,41 @@ function createCartItem(productID, products) {
   return newCartProduct;
 }
 
+/*
+---------------------------------------------KOSZYK-----------------------------------------
+*/
+
+const cartButton = document.querySelector("#cart");
+const cartWindow = document.querySelector(".cart-window");
+
+/*Pojawianie sie okna koszyka*/
+cartButton.addEventListener("click", () => {
+  cartWindow.classList.toggle("active");
+});
+
+/*----------------------------------WYCZYSC KOSZYK-------------------------------------- */
+
+const cartClearBtn = document.querySelector(".cart-clear-button");
+
+cartClearBtn.addEventListener("click", () => {
+  const cartIfEmptyDiv = document.querySelector(".cart-if-empty");
+  const cartItemCounter = document.querySelector(".cart-notification");
+
+  cartProductsQuantity = [];
+  cartProducts = [];
+  cartProductsClassNames = [];
+  addToCartBtns.forEach(() => {
+    cartProductsQuantity.push(0);
+  });
+
+  cartSection.innerHTML =
+    "<div class='cart-if-empty'>Twój koszyk jest pusty...</div>";
+  totalPrice = 0;
+  countItems = 0;
+  cartTotalPrice.innerHTML = "0 zł";
+  cartItemCounter.innerHTML = "0";
+});
+
 /* 
 ----------------------------------------------TWORZENIE KATEGORII-------------------------------------
 */
@@ -262,41 +297,6 @@ categoriesButtons.forEach((btn) =>
     renderProducts(currentProducts);
   })
 );
-
-/*
----------------------------------------------KOSZYK-----------------------------------------
-*/
-
-const cartButton = document.querySelector("#cart");
-const cartWindow = document.querySelector(".cart-window");
-
-/*Pojawianie sie okna koszyka*/
-cartButton.addEventListener("click", () => {
-  cartWindow.classList.toggle("active");
-});
-
-/*----------------------------------WYCZYSC KOSZYK-------------------------------------- */
-
-const cartClearBtn = document.querySelector(".cart-clear-button");
-
-cartClearBtn.addEventListener("click", () => {
-  const cartIfEmptyDiv = document.querySelector(".cart-if-empty");
-  const cartItemCounter = document.querySelector(".cart-notification");
-
-  cartProductsQuantity = [];
-  cartProducts = [];
-  cartProductsClassNames = [];
-  addToCartBtns.forEach(() => {
-    cartProductsQuantity.push(0);
-  });
-
-  cartSection.innerHTML =
-    "<div class='cart-if-empty'>Twój koszyk jest pusty...</div>";
-  totalPrice = 0;
-  countItems = 0;
-  cartTotalPrice.innerHTML = "0 zł";
-  cartItemCounter.innerHTML = "0";
-});
 
 /*
 PROMOCJE
