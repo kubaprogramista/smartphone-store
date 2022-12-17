@@ -48,7 +48,6 @@ function light() {
   toggle.checked = false;
   bottomWaveColor.forEach((element) => {
     element.style.transition = "all .3s ease-in-out";
-    onsive - list;
     element.style.fill = "#264ACA";
   });
   upperWaveColor.forEach((element) => {
