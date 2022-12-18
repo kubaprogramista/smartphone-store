@@ -43,6 +43,7 @@ select {
   --red: rgb(228, 69, 88);
   --darkBlue: rgba(38, 74, 202, 1);
   --lightBlue: rgba(51, 99, 231, 1);
+  --mediumFont: 1.4rem;
 }
 
 body {
@@ -158,7 +159,7 @@ header {
 }
 
 .h-link {
-  font-size: 1.4rem;
+  font-size: var(--mediumFont);
   color: var(--white);
   text-decoration: none;
   font-weight: 600;
@@ -239,7 +240,7 @@ header {
   background-color: var(--red);
   border: none;
   border-radius: 10px;
-  font-size: 1.4rem;
+  font-size: var(--mediumFont);
   letter-spacing: 0.1rem;
   font-weight: 550;
   color: var(--white);
@@ -370,7 +371,7 @@ header {
   background-color: var(--lightBlue);
   color: var(--white);
   font-weight: bold;
-  font-size: 1.4rem;
+  font-size: var(--mediumFont);
   letter-spacing: 0.12rem;
   border: 0;
   border-radius: 5px;
@@ -385,7 +386,7 @@ header {
 
 .cart-if-empty {
   display: block;
-  font-size: 1.4rem;
+  font-size: var(--mediumFont);
   text-align: center;
   margin: 20px 0;
 }
@@ -555,7 +556,7 @@ main {
 }
 
 .categories-section {
-  font-size: 1.4rem;
+  font-size: var(--mediumFont);
 }
 
 .categories-section button.active {
@@ -608,7 +609,7 @@ main {
 
 .product-name {
   margin: 4px 0;
-  font-size: 1.4rem;
+  font-size: var(--mediumFont);
   font-weight: bold;
   text-shadow: 0 0 4px rgba(0, 0, 0, 1);
 }

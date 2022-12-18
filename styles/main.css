@@ -42,6 +42,8 @@ select {
   --red: rgba(223, 73, 91, 1);
   --darkBlue: rgba(38, 74, 202, 1);
   --lightBlue: rgba(51, 99, 231, 1);
+  --mediumFont: 1.4rem;
+  --linkFont: 2.1rem;
 }
 
 body {
@@ -153,7 +155,7 @@ header {
 }
 
 .h-link {
-  font-size: 2.1rem;
+  font-size: var(--linkFont);
   color: var(--white);
   text-decoration: none;
   font-weight: 600;
@@ -237,7 +239,7 @@ header {
   border: none;
   border-radius: 10px;
   font-family: "Dosis", sans-serif;
-  font-size: 1.4rem;
+  font-size: var(--mediumFont);
   letter-spacing: 0.1rem;
   font-weight: 550;
   color: var(--white);
@@ -418,7 +420,7 @@ main {
 
 .main-left p {
   color: var(--white);
-  font-size: 1.2rem;
+  font-size: var(--mediumFont);
 }
 
 .main-left-button {
@@ -430,7 +432,7 @@ main {
   display: block;
   margin: 15px 0;
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: var(--mediumFont);
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
@@ -489,12 +491,12 @@ main {
   }
 
   .main-left h2 {
-    font-size: 32px;
+    font-size: 2.4rem;
     text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.6);
   }
 
   .main-left p {
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   .main-right {
@@ -612,8 +614,13 @@ main {
     width: 90vw;
   }
 
+  .main-left p {
+    font-size: 0.75rem;
+  }
+
   .main-left-button {
-    width: 80%;
+    width: 70%;
+    font-size: 0.82rem;
     margin-right: 0;
     margin-left: 0;
   }
