@@ -614,7 +614,7 @@ main {
 }
 
 .price {
-  text-shadow: 0 0 4px rgba(0, 0, 0, 1);
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 }
 
 .product-price {
@@ -626,6 +626,7 @@ main {
 
 .price-sale {
   display: none;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 }
 
 .product-box.onSale .price-sale {
