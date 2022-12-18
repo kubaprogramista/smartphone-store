@@ -346,7 +346,7 @@ main {
   width: auto;
   padding: 40px;
   background: linear-gradient(rgba(29, 29, 29, 1), rgba(40, 40, 40, 1));
-  box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
   border: 1px solid var(--darker);
   border-radius: 12.5px;
 }
