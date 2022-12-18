@@ -1,9 +1,46 @@
 @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@400;700;800&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  color-scheme: dark light;
+}
+
+body {
+  min-height: 100vh;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+textarea,
+button,
+select {
+  font: inherit;
+}
+
+:root {
+  --dark: rgb(61, 56, 73);
+  --darker: #141414;
+  --white: #fcfcfc;
+  --red: rgba(223, 73, 91, 1);
+  --darkBlue: rgba(38, 74, 202, 1);
+  --lightBlue: rgba(51, 99, 231, 1);
 }
 
 body {
@@ -12,16 +49,6 @@ body {
   font-family: "Dosis", sans-serif;
   letter-spacing: 0.1rem;
   height: auto;
-}
-
-:root {
-  --dark: rgb(61, 56, 73);
-  --darker: #141414;
-
-  --white: #f0ecd6;
-  --red: rgba(223, 73, 91, 1);
-  --darkBlue: rgba(38, 74, 202, 1);
-  --lightBlue: rgba(51, 99, 231, 1);
 }
 
 /*
@@ -265,7 +292,7 @@ header {
 }
 
 #darkmode-toggle:checked + #toggle-label {
-  background: #252525;
+  background: #303030;
 }
 
 #darkmode-toggle:checked + #toggle-label:after {

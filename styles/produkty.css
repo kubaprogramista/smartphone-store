@@ -34,6 +34,16 @@ select {
   font: inherit;
 }
 
+:root {
+  --dark: rgb(61, 56, 73);
+  --darker: #141414;
+  --green: #2ecc71;
+  --white: #fcfcfc;
+  --red: rgb(228, 69, 88);
+  --darkBlue: rgba(38, 74, 202, 1);
+  --lightBlue: rgba(51, 99, 231, 1);
+}
+
 body {
   color: var(--white);
   background-color: var(--lightBlue);
@@ -45,17 +55,6 @@ body {
 
 body.active {
   height: 88vh;
-}
-
-:root {
-  --dark: rgb(61, 56, 73);
-  --darker: #141414;
-
-  --green: #2ecc71;
-  --white: #f0ecd6;
-  --red: rgb(228, 69, 88);
-  --darkBlue: rgba(38, 74, 202, 1);
-  --lightBlue: rgba(51, 99, 231, 1);
 }
 
 /*
