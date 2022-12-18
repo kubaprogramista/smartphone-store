@@ -335,15 +335,15 @@ body {
 */
 
 main {
-  width: 70vw;
+  width: 73vw;
   height: 75vh;
   margin: 50px auto;
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(6.5px);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
-  padding: 25px 20px;
+  padding: 25px 40px;
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -356,7 +356,7 @@ main {
 
 .main-header {
   background-color: rgba(0, 0, 0, 0.6);
-  width: 70vw;
+  width: 73vw;
   height: 30px;
   position: absolute;
   top: -1px;
@@ -428,7 +428,7 @@ main {
   border-radius: 10px;
   padding: 15px;
   display: block;
-  margin: 15px 50px;
+  margin: 15px 0;
   font-weight: bold;
   font-size: 1.3rem;
   cursor: pointer;
@@ -441,12 +441,10 @@ main {
 }
 
 .main-right {
-  margin: 0 80px 0 0;
   height: 450px;
 }
 
 .main-right img {
-  height: 100%;
 }
 
 /*
@@ -615,5 +613,11 @@ main {
   #header-links,
   #header-buttons {
     width: 90vw;
+  }
+
+  .main-left-button {
+    width: 80%;
+    margin-right: 0;
+    margin-left: 0;
   }
 }
