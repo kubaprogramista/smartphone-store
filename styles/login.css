@@ -351,6 +351,10 @@ main {
   border-radius: 12.5px;
 }
 
+.login-section * {
+  text-shadow: 0 0 4.5px black;
+}
+
 .login-section h2 {
   width: 100%;
   text-align: center;
@@ -387,7 +391,12 @@ form input:focus::placeholder {
   transform: translateX(-75px);
 }
 
+form input:focus {
+  border: none;
+}
+
 form input:last-child {
+  font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
   padding: 0 15px 0 17px;
