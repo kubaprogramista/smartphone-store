@@ -459,7 +459,7 @@ form input:last-child:hover {
     transform: rotate(220deg);
   }
   .responsive-list.active .line:nth-child(3) {
-    transform: translateY(-14px) rotate(-220deg);
+    transform: translateY(-17px) rotate(-220deg);
   }
 
   #header-shop-name a {
