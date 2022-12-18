@@ -160,7 +160,6 @@ const renderProducts = (items) => {
       }
 
       cartSection.appendChild(cartProducts[cartProducts.length - 1]);
-      // console.log(document.querySelector(".cart-counter"));
       lastID = id;
     });
   });
