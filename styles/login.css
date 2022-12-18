@@ -533,4 +533,11 @@ form input:last-child:hover {
   #header-buttons {
     width: 90vw;
   }
+
+  .login-section {
+    width: 90vw;
+  }
+  form input {
+    width: 250px;
+  }
 }
