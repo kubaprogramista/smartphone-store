@@ -3,6 +3,7 @@ const mainImage = document.querySelector(".main-right-img");
 const bottomWaveColor = document.querySelectorAll(".bottom-wave .shape-fill");
 const upperWaveColor = document.querySelectorAll(".upper-wave .shape-fill");
 const loginSection = document.querySelector(".login-section");
+const formInputs = document.querySelectorAll("form input");
 
 function darkModeHandler() {
   if (toggle.checked) {
@@ -37,6 +38,7 @@ function dark() {
   loginSection.style.transition = "background 0.3s ease-in-out";
   loginSection.style.background =
     "linear-gradient(rgba(29, 29, 29, 1), rgba(40, 40, 40, 1))";
+  loginSection.style.border = "1px solid var(--darker)";
 }
 
 function light() {
@@ -54,7 +56,8 @@ function light() {
   // --darkBlue: rgba(38, 74, 202, 1);
   // --lightBlue: rgba(51, 99, 231, 1);
   loginSection.style.background =
-    "linear-gradient(rgba(255,255,255, .1), rgba(255,255,255, .05))";
+    "linear-gradient(rgba(0,0,0, .3), rgba(0,0,0, .15))";
+  loginSection.style.border = "1px solid rgba(255,255,255, 0.4)";
 }
 
 const responsiveList = document.querySelector(".responsive-list");
