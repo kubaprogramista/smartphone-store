@@ -113,10 +113,9 @@ const renderProducts = (items) => {
 
   addToCartBtns = document.querySelectorAll(".add-to-cart-btn");
   let id = 0;
-  let isCartEmpty = true;
   addToCartBtns.forEach((btn) => {
     cartProductsQuantity.push(0);
-    btn.addEventListener("click", (e) => {
+    btn.addEventListener("click", () => {
       const cartIfEmptyDiv = document.querySelector(".cart-if-empty");
       let productID = btn.classList[1];
       cartProductsQuantity[productID]++;
@@ -124,11 +123,13 @@ const renderProducts = (items) => {
       let cartItem = createCartItem(productID, products);
 
       //total price handler
-      itemPrice = products[productID].sale
-        ? (products[productID].price - products[productID].saleAmount).toFixed(
-            2
-          )
-        : products[productID].price.toFixed(2);
+      if (products[productID].sale) {
+        itemPrice = (
+          products[productID].price - products[productID].saleAmount
+        ).toFixed(2);
+      } else {
+        itemPrice = products[productID].price.toFixed(2);
+      }
       itemPrice = parseFloat(itemPrice);
       totalPrice += itemPrice;
       cartTotalPrice.innerHTML = `${totalPrice.toFixed(2)} zł`;
