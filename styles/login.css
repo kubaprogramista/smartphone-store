@@ -23,6 +23,7 @@ img,
 picture,
 svg,
 video {
+  user-select: none;
   display: block;
   max-width: 100%;
 }

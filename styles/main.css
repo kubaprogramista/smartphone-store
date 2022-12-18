@@ -23,6 +23,7 @@ img,
 picture,
 svg,
 video {
+  user-select: none;
   display: block;
   max-width: 100%;
 }
@@ -428,13 +429,14 @@ main {
   padding: 15px;
   display: block;
   margin: 15px 50px;
+  font-weight: bold;
   font-size: 1.3rem;
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
 
 .main-left-button:hover {
-  background-color: rgba(0, 0, 57, 0.4);
+  background-color: rgba(0, 0, 0, 0.4);
   color: var(--white);
 }
 
