@@ -338,14 +338,14 @@ body {
 
 main {
   width: 73vw;
-  height: 75vh;
+  height: auto;
   margin: 50px auto;
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
   backdrop-filter: blur(6.5px);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
-  padding: 25px 40px;
+  padding: 10vh 40px 8vh 40px;
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -443,7 +443,7 @@ main {
 }
 
 .main-right {
-  height: 450px;
+  width: 750px;
 }
 
 /*
@@ -481,6 +481,7 @@ main {
     z-index: 1;
     flex-direction: column;
     height: auto;
+    padding-top: 4vh;
   }
 
   .main-left {
