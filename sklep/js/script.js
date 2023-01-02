@@ -270,7 +270,7 @@ const categoriesButtons = document.querySelectorAll(
 
 categoriesButtons.forEach((btn) =>
   btn.addEventListener("click", (e) => {
-    const XD = e.target.className;
+    const productClassName = e.target.className;
 
     categoriesButtons.forEach((btn) => {
       btn.classList.remove("active");
@@ -279,16 +279,16 @@ categoriesButtons.forEach((btn) =>
     e.target.classList.add("active");
 
     currentProducts = products;
-    if (XD.includes("wszystkie")) {
+    if (productClassName.includes("wszystkie")) {
       currentProducts = products;
       document.body.classList.remove("active");
     } else {
       currentProducts = currentProducts.filter(
-        (product) => product.category === XD
+        (product) => product.category === productClassName
       );
       document.body.classList.add("active");
     }
-    if (XD.includes("active")) {
+    if (productClassName.includes("active")) {
       categoriesButtons.forEach((btn) => {
         btn.classList.remove("active");
         document.body.classList.remove("active");
