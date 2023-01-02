@@ -226,32 +226,6 @@ header {
   flex-wrap: wrap;
 }
 
-.red-buttons {
-  height: 40px;
-  width: 130px;
-  background-color: var(--red);
-  border: none;
-  border-radius: 10px;
-  font-size: 1.4rem;
-  letter-spacing: 0.1rem;
-  font-weight: 550;
-  color: var(--white);
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
-  transition: 0.3s ease-in-out;
-}
-
-.red-buttons:hover {
-  background-color: rgba(25, 25, 25, 0.6);
-  cursor: pointer;
-}
-
-.red-buttons img {
-  height: 20px;
-}
-
 /*
 --------------------------------------DARK MODE---------------------------------
 */
