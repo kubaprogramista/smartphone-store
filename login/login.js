@@ -53,8 +53,6 @@ function light() {
   });
   document.body.style.transition = "0.3s ease-in-out";
   document.body.style.backgroundColor = "rgb(51,99,231)";
-  // --darkBlue: rgba(38, 74, 202, 1);
-  // --lightBlue: rgba(51, 99, 231, 1);
   loginSection.style.background =
     "linear-gradient(rgba(0,0,0, .3), rgba(0,0,0, .15))";
   loginSection.style.border = "1px solid rgba(255,255,255, 0.4)";

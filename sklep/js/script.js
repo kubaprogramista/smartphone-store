@@ -134,7 +134,7 @@ const renderProducts = (items) => {
       totalPrice += itemPrice;
       cartTotalPrice.innerHTML = `${totalPrice.toFixed(2)} zł`;
 
-      //green notif counter
+      //green notification counter
       const cartItemCounter = document.querySelector(".cart-notification");
       countItems++;
       cartItemCounter.innerHTML = countItems;
@@ -143,7 +143,6 @@ const renderProducts = (items) => {
       //count same items in cart
       let counterContainer = createCartCounter(productID);
       if (cartProductsClassNames.includes(cartItem.classList[1])) {
-        //if clicked item is already in cart
         const counterContainers = document.querySelectorAll(".cart-counter");
         counterContainers.forEach((container) => {
           if (container.classList[1] === productID) {
